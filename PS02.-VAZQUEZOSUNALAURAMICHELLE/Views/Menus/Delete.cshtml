@@ -1,0 +1,56 @@
+﻿@model PS02._VAZQUEZOSUNALAURAMICHELLE.Models.Menu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estas seguro de eliminar este platillo?</h3>
+<div>
+    <h4>Menú</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoComida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoComida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreComida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreComida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>
